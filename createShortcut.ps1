@@ -6,7 +6,8 @@ $IconFile = "$PSScriptRoot\lock.ico"
 
 # Create a shortcut object
 $WshShell = New-Object -ComObject WScript.Shell
-$Shortcut = $WshShell.CreateShortcut("$env:USERPROFILE\Desktop\genpass.lnk")
+$desktop = [Environment]::GetFolderPath("Desktop")
+$Shortcut = $WshShell.CreateShortcut("$desktop\genpass.lnk")
 
 # Set the target command, "Start in" field, and custom icon (if needed)
 $Shortcut.TargetPath = $Command
