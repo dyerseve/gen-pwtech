@@ -1,12 +1,7 @@
-$profile = "Simple"
 $cmd = "C:\Programs\PwTech\pwtech.com"
-$args =  @("-profile", $profile, "-gen", 1, "-readonly", "-silent")
+$args =  @("-profile", "Passphrase", "-gen", 1, "-readonly", "-silent")
 write-host = $cmd $args
 $output = & $cmd $args
-#$output = (& "C:\Programs\PwTech\pwtech.com" -profile Passphrase -gen 1 -readonly -silent)
-#$output.GetType()
-#$output | FL
-#| Select-Column -Index 0 -RequiredCount 1 | write-host
 
 # Check if the command executed successfully
 if ($?) {
